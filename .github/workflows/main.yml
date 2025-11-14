@@ -53,6 +53,15 @@ jobs:
         publish_dir: newman/
 
 
+    - name: Debug email username
+      run: |
+        echo "Username length: ${#EMAIL_USERNAME}"
+        echo "Password length: ${#EMAIL_PASSWORD}"
+      env: |
+        EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+
+
     - name: Sending Email notifications
       if : always()
       uses: dawidd6/action-send-mail@v6
