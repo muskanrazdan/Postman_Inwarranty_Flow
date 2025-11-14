@@ -57,7 +57,7 @@ jobs:
       run: |
         echo "Username length: ${#EMAIL_USERNAME}"
         echo "Password length: ${#EMAIL_PASSWORD}"
-      env: |
+      env:
         EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
 
