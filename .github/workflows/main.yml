@@ -63,14 +63,16 @@ jobs:
         password: ${{ secrets.EMAIL_PASSWORD}}
         subject: Postman_Inwarranty_Flow Test Exexution Report
         to: muskan7razdan@gmail.com
-        from: ${{ secrets.EMAIL_USERNAME}}
+        from: Email From Muskan Github <${{ secrets.EMAIL_USERNAME}}
         body: |
           Hi,
-            To view the Postman Inwarranty Flow click herer: https://muskanrazdan.github.io/Postman_Inwarranty_Flow/
-
-
+            To view the Postman Inwarranty Flow click below: 
+            https://muskanrazdan.github.io/Postman_Inwarranty_Flow/
+            
           Thanks,
           Github Actions
+        attachments: newmman/index.html
+       
             
       
   
