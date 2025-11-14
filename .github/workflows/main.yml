@@ -58,12 +58,12 @@ jobs:
       uses: dawidd6/action-send-mail@v6
       with:
           server_address: smtp.gmail.com
-          server_port: 587
+          server_port: 465
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_APP_PASSWORD }}     
           secure: true                                   
           subject: "Postman_Inwarranty_Flow Test Execution Report"
-          from: Email From Muskan Github <${{ secrets.EMAIL_USERNAME}}
+          from: Email From Muskan Github <${{ secrets.EMAIL_USERNAME}}>
           to: muskan7razdan@gmail.com
           body: |
               Hi,
