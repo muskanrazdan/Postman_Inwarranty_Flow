@@ -57,21 +57,22 @@ jobs:
       if : always()
       uses: dawidd6/action-send-mail@v6
       with:
-        server_address: smtp.gmail.com
-        server_port: 465
-        username: ${{ secrets.EMAIL_USERNAME}}
-        password: ${{ secrets.EMAIL_PASSWORD}}
-        subject: Postman_Inwarranty_Flow Test Exexution Report
-        to: muskan7razdan@gmail.com
-        from: Email From Muskan Github <${{ secrets.EMAIL_USERNAME}}
-        body: |
-          Hi,
-            To view the Postman Inwarranty Flow click below: 
-            https://muskanrazdan.github.io/Postman_Inwarranty_Flow/
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_APP_PASSWORD }}     
+          secure: true                                   
+          subject: "Postman_Inwarranty_Flow Test Execution Report"
+          from: Email From Muskan Github <${{ secrets.EMAIL_USERNAME}}
+          to: muskan7razdan@gmail.com
+          body: |
+              Hi,
+                To view the Postman Inwarranty Flow click below: 
+                https://muskanrazdan.github.io/Postman_Inwarranty_Flow/
             
-          Thanks,
-          Github Actions
-        attachments: newmman/index.html
+              Thanks,
+              Github Actions
+          attachments: newmman/index.html
        
             
       
