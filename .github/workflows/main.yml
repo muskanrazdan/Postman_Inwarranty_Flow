@@ -15,7 +15,6 @@ jobs:
   
   run-postman-test:
     runs-on: ubuntu-latest
-    environment: github-pages
 
     steps:
     - name: checkout the code
